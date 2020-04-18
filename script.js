@@ -8,12 +8,12 @@ let blurBackground = document.querySelector(".blurBackground");
 let blurNavigation = document.getElementById("blurNavigation");
 let imageSource = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg"];
 
-
 let ChangeBackgroundSlideDown = () => {
     let source = 'url('+imageSource[count] + ')';
     bigContainer.style.backgroundImage = source;
     blurBackground.style.backgroundImage = source;
     blurNavigation.style.backgroundImage = source;
+    requestAnimationFrame(ChangeBackgroundSlideDown);
 }
 
 let ChangeBackgroundSlideUp = () => {
@@ -21,6 +21,7 @@ let ChangeBackgroundSlideUp = () => {
     bigContainer.style.backgroundImage = source;
     blurBackground.style.backgroundImage = source;
     blurNavigation.style.backgroundImage = source;
+    requestAnimationFrame(ChangeBackgroundSlideUp);
 }
 
 
@@ -66,6 +67,7 @@ let ChangeApperance = () => {
         MainNavigationLinks[count+1].style.pointerEvents = 'visible'
     }
     
+    requestAnimationFrame(ChangeApperance);
 }
 
 let CheckCount = () => {
@@ -92,9 +94,10 @@ let SlideDown = () => {
     
     //SetTransition();
     count++;
+    mainNavigation.style.transform = "translateY(-"+MainNavigationHeight*count+"px)";
     mainNavigation.style.webkitTransform = "translateY(-"+MainNavigationHeight*count+"px)";
     ChangeApperance();
-    
+    ChangeBackgroundSlideDown();
     TranslateText();
     
     //ChangeApperance();   
@@ -114,10 +117,11 @@ let SlideUp = () => {
 
     //SetTransition();
     count--;
+    mainNavigation.style.transform = "translateY(-"+MainNavigationHeight*count+"px)";
     mainNavigation.style.webkitTransform = "translateY(-"+MainNavigationHeight*count+"px)";
     ChangeApperance();
+    ChangeBackgroundSlideUp();
     TranslateText();
-   
     }
     
 }
@@ -136,6 +140,7 @@ let TranslateText = () => {
     let descriptionText = descriptionContainer[count].querySelectorAll("p");
     for(let i = 0; i < descriptionText.length ;i++) {
         setTimeout(function(){
+            descriptionText[i].style.transform = "translateX(0px)";
             descriptionText[i].style.webkitTransform = "translateX(0px)";
             descriptionText[i].style.opacity = "1";
         },time)
@@ -151,6 +156,7 @@ let TranslateTextBack = () =>{
         descriptionContainer[count+1].style.display = "none";
         let descriptionText = descriptionContainer[count+1].querySelectorAll("p");
         for(let i=0; i< descriptionText.length; i++){
+            descriptionText[i].style.transform = "translateX(-30%)";
             descriptionText[i].style.webkitTransform = "translateX(-30%)";
             descriptionText[i].style.opacity = "0";
         }
@@ -181,8 +187,10 @@ let TranslateTextBack = () =>{
         let descriptionText1 = descriptionContainer[count-1].querySelectorAll("p");
         let descriptionText2 = descriptionContainer[count+1].querySelectorAll("p");
         for(let i = 0; i<descriptionText1.length;i++){
+            descriptionText1[i].style.transform = "translateX(-30%)";
             descriptionText1[i].style.webkitTransform = "translateX(-30%)";
             descriptionText1[i].style.opacity = "0";
+            descriptionText2[i].style.transform = "translateX(-30%)";
             descriptionText2[i].style.webkitTransform = "translateX(-30%)";
             descriptionText2[i].style.opacity = "0";
         }
