@@ -94,7 +94,7 @@ let SlideDown = () => {
     count++;
     mainNavigation.style.webkitTransform = "translateY(-"+MainNavigationHeight*count+"px)";
     ChangeApperance();
-    ChangeBackgroundSlideDown();
+    
     TranslateText();
     
     //ChangeApperance();   
@@ -117,7 +117,7 @@ let SlideUp = () => {
     mainNavigation.style.webkitTransform = "translateY(-"+MainNavigationHeight*count+"px)";
     ChangeApperance();
     TranslateText();
-    ChangeBackgroundSlideUp();
+   
     }
     
 }
