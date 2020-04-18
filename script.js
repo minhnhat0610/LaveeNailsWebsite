@@ -40,34 +40,35 @@ console.log(fontSizeSmall);
 console.log(fontSizeLarge);
 
 
+
 let ChangeApperance = () => {
     if(isSlideUp){
-        MainNavigationLinks[count].style.fontSize = fontSizeSmall;
-        MainNavigationLinks[count].style.opacity = "0.5";
-        MainNavigationLinks[count].style.height = "25%";
-        MainNavigationLinks[count].style.fontWeight = "normal";
-        MainNavigationLinks[count].style.pointerEvents = 'none'
-        MainNavigationLinks[count+1].style.fontSize = fontSizeLarge;
-        MainNavigationLinks[count+1].style.opacity = "1";
-        MainNavigationLinks[count+1].style.height = "50%";
-        MainNavigationLinks[count+1].style.fontWeight = "bold";
-        MainNavigationLinks[count+1].style.pointerEvents = 'visible'
+        let link1 = MainNavigationLinks[count].getElementsByTagName('a');
+        let link2 = MainNavigationLinks[count+1].getElementsByTagName('a');
+        MainNavigationLinks[count].style.height = '25%';
+        MainNavigationLinks[count+1].style.height = '50%';
+        link1[0].style.transform = 'scale(1,1)';
+        link1[0].style.opacity = 0.5;
+        link1[0].style.pointerEvents = 'none';
+        link2[0].style.transform = 'scale(1.5,1.5)';
+        link2[0].style.opacity = 1;
+        link2[0].style.pointerEvents = 'visible';
     }
 
     if(isSlideDown){
-        MainNavigationLinks[count+2].style.fontSize = fontSizeSmall;
-        MainNavigationLinks[count+2].style.opacity = "0.5";
-        MainNavigationLinks[count+2].style.height = "25%";
-        MainNavigationLinks[count+2].style.fontWeight = "normal";
-        MainNavigationLinks[count+2].style.pointerEvents = 'none'
-        MainNavigationLinks[count+1].style.fontSize = fontSizeLarge;
-        MainNavigationLinks[count+1].style.opacity = "1";
-        MainNavigationLinks[count+1].style.height = "50%";
-        MainNavigationLinks[count+1].style.fontWeight = "bold";
-        MainNavigationLinks[count+1].style.pointerEvents = 'visible'
+        let link1 = MainNavigationLinks[count+2].getElementsByTagName('a');
+        let link2 = MainNavigationLinks[count+1].getElementsByTagName('a');
+        MainNavigationLinks[count+2].style.height = '25%';
+        MainNavigationLinks[count+1].style.height = '50%';
+        link1[0].style.transform = 'scale(1,1)';
+        link1[0].style.opacity = 0.5;
+        link1[0].style.pointerEvents = 'none';
+        link2[0].style.transform = 'scale(1.5,1.5)';
+        link2[0].style.opacity = 1;
+        link2[0].style.pointerEvents = 'visible';
+
     }
     
-    requestAnimationFrame(ChangeApperance);
 }
 
 let CheckCount = () => {
