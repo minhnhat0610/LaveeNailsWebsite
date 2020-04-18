@@ -1,0 +1,174 @@
+@font-face{
+    font-family: 'Open Sans';
+    src: url(OpenSans-Regular.ttf);
+}
+
+@font-face{
+    font-family: Shalinta;
+    src: url(Shalinta.otf);
+}
+
+@font-face{
+    font-family: Lora;
+    src: url(Lora-Regular.ttf);
+}
+/* Extra Background */
+#background2{
+    background-image: url(2.jpg);
+}
+
+#background3{
+    background-image: url(3.jpg);
+}
+
+#background4{
+    background-image: url(4.jpg);
+}
+
+#background5{
+    background-image: url(5.jpg);
+}
+
+/* Body Content */
+.bigContainer{
+    -webkit-transition: 0.5s ease-in-out 0.5s;
+    transition: 0.5s ease-in-out 0.5s;
+}
+
+.blurBackground{
+    -webkit-transition: 0.5s ease-in-out 0.6s;
+    transition: 0.5s ease-in-out 0.6s;
+}
+
+ #bodyContent{
+    height: 80%;
+    margin-left: 0px;
+ }
+
+ /* Sub-Navigation */
+ #links li:first-of-type a{
+     text-decoration: underline;
+ }
+
+
+ /* Main Navigation */
+
+ #Control{
+     padding: 0px;
+     display: flex;
+     align-items: center;
+ }
+
+ #Control div{
+     width: 100%;
+ }
+
+ #Control i{
+
+    width: 100%;
+    font-size: 2vw;
+    text-align: center;
+    cursor: pointer;
+ }
+
+
+ #mainNavigationContainer{
+    display: flex;
+    align-items: center;
+    padding: 0px;
+ }
+ #mainNavigation{
+    height: 40%;
+    width: 100%;
+    overflow: hidden;
+
+ }
+
+ #mainNavigation ul {
+
+     height: 100%;
+     padding: 0px;
+     -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+
+    will-change: transform;
+ }
+
+ #mainNavigation li{
+
+     list-style-type: none;
+     font-size: 2vw;
+ 
+    text-align: center;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+    height: 25%;
+    opacity: 0.5;
+
+    pointer-events: none;
+
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+
+    will-change: opacity;
+ }
+
+
+ #mainNavigation li:nth-of-type(2){
+     height: 50%;
+     font-size: 3vw;
+     opacity: 1;
+     font-weight: bold;
+     pointer-events: visible;
+ }
+
+
+ #mainNavigation a{
+     
+     text-decoration: none;
+     font-family: Lora;
+
+ }
+
+ /* Links Description */
+ #descriptions{
+    display: flex;
+    align-items: center;
+ }
+
+#descriptions div {
+    display: none;
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.75) 25%, rgba(255,255,255,0.75) 50%, rgba(255,255,255,0.75) 75%, rgba(0,0,0,0) 100%);
+ 
+}
+
+ .descriptionsText p{
+     color: black;
+    font-size: 1.2vw;
+     font-style: italic;
+     font-weight: lighter;
+     width: 100%;
+     text-align: right;
+     transform: translateX(-30%);
+     transition: 1s ease-in-out 1s;
+     -webkit-transition: 1s ease-in-out 1s;
+     opacity: 0;
+     padding-right: 5%;
+ }
+
+
+ @media screen and (max-width: 500px){
+    #mainNavigation li{
+        font-size: 2.5vh;
+    }
+
+    #mainNavigation li:nth-of-type(2){
+        font-size: 4vh;
+    }
+
+    #Control i{
+        font-size: 2.5vh;
+    }
+ }

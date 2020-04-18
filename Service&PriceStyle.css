@@ -1,0 +1,177 @@
+@font-face{
+    font-family: Abril;
+    src: url(AbrilFatface-Regular.ttf);
+}
+
+@font-face{
+    font-family: Cormorant;
+    src: url(CormorantGaramond-Medium.ttf);
+}
+
+/* Navigation */
+#links li:nth-of-type(2) a{
+    text-decoration: underline;
+}
+
+
+/* Body and Browser */
+.bigContainer{
+    background-image: url(2.jpg);
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+}
+
+
+
+.blurBackground{
+    background-image: url(2.jpg);
+}
+
+#blurNavigation{
+    background-image: url(2.jpg);
+}
+
+/* Body Content */
+
+#bodyContainer{
+    height: 100%;
+    max-height: 100%;
+}
+
+#bodyContent{
+    height: 75%;
+    max-height:75%;
+    padding: 0px;
+}
+
+#bodyContent div{
+    margin-left: 0px;
+}
+
+#bodyContent > div{
+    width: 85%;
+    height: 100%;
+    max-height: 100%;
+    position: relative;
+}
+
+#priceListContainer{
+    height: 100%;
+    max-height: 100%;
+    box-shadow: 5px 5px 10px black;
+}
+
+#blurPriceListContainer{
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    max-height: 100%;
+    background-image: url(2.jpg);
+    background-position: center center ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+
+    filter: blur(10px);
+    z-index: -1;
+
+}
+
+#serviceAndPriceHeader{
+    height: 15%;
+    justify-content: center;
+    align-items: center;
+}
+
+#serviceAndPriceHeader p {
+    color: rgb(78, 3, 92);
+    font-size: 2.5vw;
+    font-family: Abril;
+    text-decoration: underline;
+}
+
+#serviceAndPriceList {
+   
+    height: 85%;
+    max-height: inherit;
+    overflow-y: scroll;
+    display: block;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+#serviceAndPriceList > div{
+   margin-bottom: 5%;
+   width: 98%;
+   margin-left: auto;
+   margin-right: auto;
+   border-bottom: 1px solid rgb(165,95,193);
+   border-bottom-left-radius: 5px;
+   border-bottom-right-radius: 5px;
+}
+
+.serviceContainer{
+    display: flex;
+    align-items: center;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.service{
+
+    display: flex;
+    align-items: center;
+}
+
+.service p{
+    color: rgb(78, 3, 92);
+    font-family: Abril;
+    font-size: 2.2vw;
+   
+}
+
+.detailPrice{
+   
+    align-items: center;
+    padding-right: 0px;
+    padding-left: 0px;
+    display: flex;
+}
+
+.detailPrice > div > div{
+    margin-bottom: 5%;
+}
+
+.detail{
+    color:black;
+    font-size: 1.8vw;
+    padding-left: 10%;
+    font-family: Cormorant;
+}
+
+.price{
+    font-size: 2vw;
+    font-family: Cormorant;
+    color: red;
+}
+
+@media screen and (max-width:500px){
+    #serviceAndPriceHeader p{
+        font-size: 2vh;
+    }
+    .service p {
+        font-size: 1.8vh;
+    }
+
+    .detail {
+        font-size: 1.2vh;
+    }
+
+    .detailPrice > div > div{
+        margin-bottom: 6%;
+    }
+}
+

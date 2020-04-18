@@ -1,0 +1,242 @@
+@font-face{
+    font-family: 'Open Sans';
+    src: url(OpenSans-Regular.ttf);
+}
+
+@font-face{
+    font-family: 'Open Sans';
+    src: url(OpenSans-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face{
+    font-family: Shalinta;
+    src: url(Shalinta.otf);
+}
+/* Body and browser */
+html, body {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    background-color: black;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    font-family: 'Open Sans';
+    color: white;
+}
+
+body p, body i, body a{
+    color: black;
+}
+
+body a:hover{
+    color: black;
+}
+
+.blurBackground{
+    height: 100%;
+    background: transparent url(1.jpg) no-repeat center center;
+    background-size: cover;
+    filter: blur(5px);
+    position: absolute;
+    top: 0px;
+    
+}
+
+.bigContainer {
+    position: relative;
+    display: flex;
+    width: 95%;
+    height: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+    align-items: center;
+    background: transparent url(1.jpg) no-repeat center center;
+    background-size: cover;
+
+    box-shadow: 5px 5px 10px black;
+}
+
+
+#innerContainer {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+/* Navigation */
+#navigationContainer{
+    height: 100%;
+    padding: 0px;
+    position: relative;
+}
+
+
+ #navigation{
+    border-right: 0.5px solid black;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+ }
+
+
+ #blurNavigation{
+    box-sizing: border-box;
+    background-image: url(1.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    filter: blur(10px);
+    -webkit-transition: 0.5s ease-in-out 0.5s;
+    transition: 0.5s ease-in-out 0.5s;
+ }
+
+ #iconRow{
+    font-size: 2vh;
+    height: 85%;
+    margin-left: 0px;
+    
+ }
+
+ #iconRow i {
+    height: 20%;
+    font-size: 3vw;
+    cursor: pointer;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ #iconRow div{
+     height: 80%;
+     margin-left: 0px;
+     display: flex;
+     align-items: center;
+ }
+
+ #iconRow ul {
+    height: 100%;
+    padding: 0;
+    text-align: right;
+    overflow-y: scroll;
+ }
+
+ #iconRow ul::-webkit-scrollbar{
+     display: none;
+ }
+
+ #iconRow li {
+    text-align: center;
+     width: 100%; 
+     list-style-type: none;
+     margin-top: 20%;
+     margin-bottom: 20%;
+ }
+
+ #iconRow li a{
+     pointer-events: none;
+     text-align: center;
+     font-size: 1.1vw;
+     text-decoration: none;
+     opacity: 0;
+ }
+
+
+
+ #LaveeLogo{
+    height: 15%;
+    margin-left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+ }
+
+ #LaveeLogo img{
+     height: 70%;
+ }
+
+ /* Body Header */
+
+ #bodyContainer{
+     padding-left: 0px;
+     padding-right: 0px;
+ }
+ #bodyHeader{
+    height: 20%;
+
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ #brand{
+
+     height: 75%;
+     display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-left: 0px;
+ }
+
+ #brand p {
+
+     text-align: center;
+     font-family: Shalinta;
+     font-weight: bold;
+     font-size: 4.5vw;
+     border-bottom: 1px solid black;
+     line-height: 90%;
+
+     
+ }
+
+ #missionStatement{
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 0px;
+
+ }
+
+ #missionStatement p {
+     
+     text-align: center;
+     font-size: 1vw;
+ }
+
+ #test{
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ @media screen and (max-width: 1024px){
+     #brand p{
+         font-size: 5vh;
+     }
+
+     #missionStatement p{
+         font-size: 1.5vh;
+     }
+
+     #LaveeLogo img{
+        opacity: 0;
+    }
+
+    #iconRow li a{
+        font-size: 2.5vh;
+    }
+
+    #iconRow i{
+        font-size: 2.5vh;
+    }
+
+ }
