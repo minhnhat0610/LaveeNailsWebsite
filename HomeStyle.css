@@ -152,8 +152,8 @@
      width: 100%;
      text-align: right;
      transform: translateX(-30%);
-     transition: 1s ease-in-out 0.8s;
-     -webkit-transition: 1s ease-in-out 0.8s;
+     transition: 1s ease-in-out 0.5s;
+     -webkit-transition: 1s ease-in-out 0.5s;
      opacity: 0;
      padding-right: 5%;
  }

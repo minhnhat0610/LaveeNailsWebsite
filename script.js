@@ -91,18 +91,12 @@ let SlideDown = () => {
     isSlideUp = true;
     isSlideDown = false;
     
-    //ChangeBackgroundSlideDown();
-    
-    //SetTransition();
     count++;
     mainNavigation.style.transform = "translateY(-"+MainNavigationHeight*count+"px)";
     mainNavigation.style.webkitTransform = "translateY(-"+MainNavigationHeight*count+"px)";
     ChangeApperance();
-    ChangeBackgroundSlideDown();
     TranslateText();
-    
-    //ChangeApperance();   
-    //TranslateText();
+
     }
     
 
@@ -113,15 +107,10 @@ let SlideUp = () => {
     isSlideUp = false;
     isSlideDown = true;
     
-
-   //ChangeBackgroundSlideUp();
-
-    //SetTransition();
     count--;
     mainNavigation.style.transform = "translateY(-"+MainNavigationHeight*count+"px)";
     mainNavigation.style.webkitTransform = "translateY(-"+MainNavigationHeight*count+"px)";
     ChangeApperance();
-    ChangeBackgroundSlideUp();
     TranslateText();
     }
     
