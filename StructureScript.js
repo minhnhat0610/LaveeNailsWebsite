@@ -39,7 +39,7 @@ let NavigationMobile = () => {
 let LinksShowUp = () => {
     for(let i=0; i< linksContainer.length; i++){
         let links = linksContainer[i].getElementsByTagName('a');
-        links[0].style.transition = '0.5s ease-in-out 0.4s';
+        links[0].style.transition = '0.5s ease-in-out 0.3s';
         links[0].style.opacity = 1;
         links[0].style.pointerEvents = 'visible';
     }
@@ -59,18 +59,20 @@ let LinksHidden = () => {
 }
 
 let expandNavigation = () => {
-    navigationContainer.style.transition = '0.5s ease-in-out';
-    navigationContainer.classList.replace('col-1','col-6');
-    bodyContainer.style.display = 'none';
+    navigationContainer.style.width = '50%';
+    bodyContainer.style.opacity = '0';
+    bodyContainer.style.transition = '0.2s ease-in-out';
+    bodyContainer.style.pointerEvents = 'none';
     LaveeLogo[0].style.opacity = 1;
 
 
 }
 
 let hideNavigation = () => {
-    navigationContainer.style.transition = '0.5s ease-in-out';
-    navigationContainer.classList.replace('col-6','col-1');
-    bodyContainer.style.display = 'block';
+    navigationContainer.style.width = '10%';
+    bodyContainer.style.opacity = '1';
+    bodyContainer.style.transition = '0.2s ease-in-out 0.2s';
+    bodyContainer.style.pointerEvents = 'visible';
     LaveeLogo[0].style.opacity = 0;
 
 }
