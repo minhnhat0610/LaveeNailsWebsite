@@ -41,7 +41,6 @@ body a:hover{
     filter: blur(5px);
     position: absolute;
     top: 0px;
-    
 }
 
 .bigContainer {
@@ -65,6 +64,7 @@ body a:hover{
     height: 100%;
     margin-left: auto;
     margin-right: auto;
+    overflow: hidden;
 }
 
 
@@ -178,6 +178,7 @@ body a:hover{
     transition:  0.5s ease-in-out;
     -webkit-transition:  0.5s ease-in-out;
     opacity: 0;
+    
  }
 
 

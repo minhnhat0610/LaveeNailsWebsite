@@ -6,7 +6,7 @@
     background-image: url(4.jpg);
 }
 
-#blurNavigation{
+.blurNavigation{
     background-image: url(4.jpg);
 }
 
@@ -17,6 +17,10 @@
 /* Navigation */
 
 #links li:nth-of-type(4) a{
+    text-decoration: underline;
+}
+
+#linksMobile li:nth-of-type(4) a{
     text-decoration: underline;
 }
 

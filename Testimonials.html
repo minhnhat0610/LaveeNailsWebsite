@@ -12,21 +12,50 @@
 <body>
     <div class="bigContainer">
         <div class="row" id="innerContainer">
-            <div class="col-1" id="navigationContainer">
-                <div id="blurNavigation"></div>
-                <div id="navigation">
-                <div class="row w-100" id="iconRow">
-                    <i class="fas fa-bars w-100" id="navButton"></i>
-                    <div class="row w-100">
-                        <ul class="w-100" id="links">
+            <div id="navigationMobile">
+                <div class="blurNavigation"></div>
+                <div class="navigation">
+                    <div class="row w-100 iconRow">
+                        <i class="fas fa-bars w-100" id="navButton2"></i>
+                        <ul class="w-100" id="linksMobile">
                             <li>
-                                <a href="index.html" target="_blank">Home</a>
+                                <a href="#">Home</a>
                             </li>
                             <li>
                                 <a href="Service&Price.html" target="_blank">Services and Prices</a>
                             </li>
                             <li>
-                                <a href="#">Testimonials</a>
+                                <a href="Testimonials.html" target="_blank">Testimonials</a>
+                            </li>
+    
+                            <li>
+                                <a href="Contact.html" target="_blank">Contact</a>
+                            </li>
+                            <li>
+                                <a href="">Gallery</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row w-100 LaveeLogo">
+                        <img src="LaveeLogo.png" alt="LaveeLogo"/>
+                    </div>
+                </div>
+            </div>
+            <div id="navigationContainer">
+                <div class="blurNavigation"></div>
+                <div class="navigation">
+                <div class="row w-100 iconRow">
+                    <i class="fas fa-bars w-100" id="navButton"></i>
+                    <div class="row w-100">
+                        <ul class="w-100" id="links">
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="Service&Price.html" target="_blank">Services and Prices</a>
+                            </li>
+                            <li>
+                                <a href="Testimonials.html" target="_blank">Testimonials</a>
                             </li>
     
                             <li>
@@ -40,11 +69,11 @@
                     
                     
                 </div>
-                <div class="row w-100" id="LaveeLogo">
+                <div class="row w-100 LaveeLogo">
                     <img src="LaveeLogo.png" alt="LaveeLogo"/>
                 </div>
                 
-            </div>
+                </div>
             </div>
             
 
@@ -170,7 +199,33 @@
                                     </div>
                                 </div>
 
-                                
+                                <div class="row review">
+                                    <div class="col-12 col-xl-8 reviewImage">
+                                        <img src="LaveePhoto.png" alt="Review Photo">
+                                    </div>
+                                    <div class="col-12 col-xl-4 reviewDetailContainer">
+                                        <div class="row w-100 reviewDetail">
+                                            <div class="row w-100 title pl-2">
+                                                <p>Review Us On!</p>
+                                            </div>
+
+                                            <div class="seperator ml-2"></div>
+
+                                            <div class="row w-100 reviewButtonContainer">
+                                                <div class="row w-100 ml-0 reviewButton">
+                                                    <button id="FacebookButton" type="button" onclick="window.open('https://www.facebook.com/LaVeeNailSalon/reviews')"><i class="fab fa-facebook-f"></i>acebook</button></div>
+                                                <div class="row w-100 ml-0 reviewButton">
+                                                    <button id="GoogleButton" type="button" onclick="window.open('https://www.google.com/search?sxsrf=ALeKk02bmn-sMn4ZiqQPbYn798JwFelu1g:1587337232779&q=lavee+nails&spell=1&sa=X&ved=2ahUKEwi725f_y_XoAhUhVt8KHSJJAekQBSgAegQIFRAn&biw=1918&bih=977')">
+                                                        <i class="fab fa-google"></i>oogle</button></div>
+                                                <div class="row w-100 ml-0 reviewButton">
+                                                    <button id="YelpButton" type="button" onclick="window.open('https://www.yelp.com/biz/lavee-nail-salon-louisville')"><i class="fab fa-yelp"></i> Yelp</button></div>
+                                                
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
 
 
                              
