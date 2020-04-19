@@ -50,6 +50,10 @@
      text-decoration: underline;
  }
 
+ #linksMobile li:first-of-type a{
+     text-decoration: underline;
+ }
+
 
  /* Main Navigation */
 
