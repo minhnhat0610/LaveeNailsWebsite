@@ -125,4 +125,4 @@ let expandContact = () =>{
     businessHour.style.height = '20%';
     expandLayout(contact);
 }
-setTimeout(expandContact,1000);
+setTimeout(expandContact,500);

@@ -61,10 +61,9 @@ let LinksHidden = () => {
 let expandNavigation = () => {
     navigationContainer.style.width = '50%';
     bodyContainer.style.opacity = '0';
-    bodyContainer.style.transition = '0.2s ease-in-out 0.5s';
-    LaveeLogo[0].style.opacity = 1;
+    bodyContainer.style.transition = '0.2s ease-in-out';
     bodyContainer.style.pointerEvents = 'none';
-    
+    LaveeLogo[0].style.opacity = 1;
 
 
 }
@@ -72,10 +71,9 @@ let expandNavigation = () => {
 let hideNavigation = () => {
     navigationContainer.style.width = '10%';
     bodyContainer.style.opacity = '1';
-    bodyContainer.style.transition = '0.2s ease-in-out 0.5s';
-    LaveeLogo[0].style.opacity = 0;
+    bodyContainer.style.transition = '0.2s ease-in-out 0.4s';
     bodyContainer.style.pointerEvents = 'visible';
-    
+    LaveeLogo[0].style.opacity = 0;
 
 }
 
